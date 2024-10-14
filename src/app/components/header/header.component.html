@@ -1,0 +1,13 @@
+<section class="fixed top-0 z-10 flex items-center justify-between w-full mx-auto mt-2">
+  <nav class="flex px-3 mx-6 text-sm font-medium rounded-full text-gray-600 dark:text-gray-200 w-full items-center">
+    <div>
+      <a href="#" class="text-xl transition hover:text-blue-400">kdr4x</a>
+    </div>
+
+    <div class="flex ml-auto space-x-4">
+      <a *ngFor="let link of navItems" [href]="link.url" [attr.aria-label]="link.label" class="relative block p-2 transition hover:text-blue-300 dark:hover:text-blue-500">
+        {{ link.title }}
+      </a>
+    </div>
+  </nav>
+</section>
