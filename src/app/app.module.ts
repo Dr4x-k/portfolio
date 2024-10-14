@@ -10,6 +10,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { LayoutComponent } from './layouts/layout/layout.component';
 import { BadgeComponent } from './components/badge/badge.component';
 import { LoaderComponent } from './components/loader/loader.component';
+import { SocialsComponent } from './components/socials/socials.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { LoaderComponent } from './components/loader/loader.component';
     FooterComponent,
     LayoutComponent,
     BadgeComponent,
-    LoaderComponent
+    LoaderComponent,
+    SocialsComponent
   ],
   imports: [
     BrowserModule,

@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { freeSet } from '@coreui/icons';
 
 @Component({
   selector: 'app-root',
@@ -7,6 +6,5 @@ import { freeSet } from '@coreui/icons';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  icons = freeSet;
   title = 'portfolio';
 }
