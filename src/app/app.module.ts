@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 import { AngularFireModule } from '@angular/fire/compat';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -29,7 +30,8 @@ import { TechnologiesComponent } from './components/technologies/technologies.co
   imports: [
     BrowserModule,
     AppRoutingModule,
-    AngularFireModule.initializeApp(environment.firebaseConfig)
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    HttpClientModule
   ],
   providers: [
     provideClientHydration()

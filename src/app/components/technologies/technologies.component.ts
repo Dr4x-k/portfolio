@@ -25,7 +25,6 @@ export class TechnologiesComponent implements OnInit {
           data.forEach((item) => {
             const key = item.key as keyof Tecnologias; // Obtener la clave del item
             const value = item.payload.val() as Tecnologias | null;
-            console.log(value);
 
             // Comprobar si el valor no es null antes de asignarlo
             if (value !== null) {

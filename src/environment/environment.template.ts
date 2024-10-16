@@ -10,4 +10,5 @@ export const environment = {
     appId: '',
     measurementId: '',
   },
+  githubUser: ''
 };
