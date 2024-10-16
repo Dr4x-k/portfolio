@@ -1,4 +1,4 @@
-<div class="relative m-auto overflow-hidden">
+<div class="relative my-24 overflow-hidden">
   <!-- Elemento antes del contenido -->
   <div class="before-element absolute left-0 top-0 z-[2] w-[100px] content-['']"></div>
   <!-- Elemento después del contenido -->
@@ -8,11 +8,11 @@
   <div class="animate-infinite-slider flex w-[calc(450px*10)]">
     <div class="slide flex w-[125px] items-center justify-center" *ngFor="let logo of data | keyvalue; let i = index">
       <!-- Aquí puedes renderizar el contenido de logo -->
-      <img class="" [src]="logo.value.Image" alt="{{logo.value.Nombre}}" />
+      <img class="drop-shadow-[0_0_5px_rgba(255,255,255,1)]" [src]="logo.value.Image" alt="{{logo.value.Nombre}}" />
     </div>
     <!-- Segundo grupo de logos -->
     <div class="slide flex w-[125px] items-center justify-center" *ngFor="let logo of data | keyvalue; let i = index">
-      <img [src]="logo.value.Image" alt="{{logo.value.Nombre}}" />
+      <img class="drop-shadow-[0_0_5px_rgba(255,255,255,1)]" [src]="logo.value.Image" alt="{{logo.value.Nombre}}" />
     </div>
   </div>
 </div>
