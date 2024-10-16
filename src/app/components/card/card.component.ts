@@ -6,5 +6,28 @@ import { Component } from '@angular/core';
   styleUrl: './card.component.scss'
 })
 export class CardComponent {
-
+  projects = [
+    {
+      title: "Portfolio",
+      description: "A portfolio website showcasing my skills and projects",
+      links: [
+        {
+          name: "GitHub",
+          url: "https://github.com/your-username/portfolio",
+          icon: "ri-github-fill"
+        }
+      ]
+    },
+    {
+      title: "Portfolio",
+      description: "A portfolio website showcasing my skills and projects",
+      links: [
+        {
+          name: "GitHub",
+          url: "https://github.com/your-username/portfolio",
+          icon: "ri-github-fill"
+        }
+      ]
+    }
+  ]
 }

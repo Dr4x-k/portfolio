@@ -1,0 +1,18 @@
+<div class="relative m-auto overflow-hidden">
+  <!-- Elemento antes del contenido -->
+  <div class="before-element absolute left-0 top-0 z-[2] w-[100px] content-['']"></div>
+  <!-- Elemento después del contenido -->
+  <div class="after-element absolute right-0 top-0 z-[2] w-[100px] -scale-x-100 content-['']"></div>
+
+  <!-- Contenedor con animación -->
+  <div class="animate-infinite-slider flex w-[calc(450px*10)]">
+    <div class="slide flex w-[125px] items-center justify-center" *ngFor="let logo of data | keyvalue; let i = index">
+      <!-- Aquí puedes renderizar el contenido de logo -->
+      <img class="" [src]="logo.value.Image" alt="{{logo.value.Nombre}}" />
+    </div>
+    <!-- Segundo grupo de logos -->
+    <div class="slide flex w-[125px] items-center justify-center" *ngFor="let logo of data | keyvalue; let i = index">
+      <img [src]="logo.value.Image" alt="{{logo.value.Nombre}}" />
+    </div>
+  </div>
+</div>

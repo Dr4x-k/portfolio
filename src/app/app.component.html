@@ -1,36 +1,58 @@
 <div class="min-h-screen flex flex-col">
   <app-header></app-header>
+  <app-loader></app-loader>
 
   <main class="flex-grow">
-    <!-- <app-section id="home" class="py-44 pb-32 flex flex-col gap-y-10"> -->
-    <app-section id="home" class="pt-28 lg:pt-44 container mx-auto h-full">
-      <div class="flex flex-col lg:flex-row xl:flex-row items-center justify-between xl:pt-8 xl:pb-24">
-        <div class="text-center xl:text-left order-2 lg:order-none xl:order-none">
-          <span class="text-xl text-black/70 dark:text-gray-400">Desarrollador de Software</span>
-          <h1 class="text-4xl mb-6 text-black/80 dark:text-gray-100">Hola, yo soy <br /> <span
-              class="text-blue-400">Jorge Bernal</span></h1>
-          <p class="max-w-[500px] mb-9 text-white/70">+1 años de experiencia. <strong class="text-blue-400">Ingeniero de
-              Gestión y Desarrollo de Software Multiplataforma</strong> de Sonora, México. Especializado en el
-            desarrollo backend.</p>
-          <div class="flex flex-col lg:flex-row items-center">
-            <button class="uppercase flex items-center gap-2">Descargar CV</button>
+    <app-section id="home" #sectionRef class="h-screen pt-[80px] lg:pt-44 container mx-auto">
+      <div class="flex flex-col md:pb-36 lg:flex-row xl:flex-row items-center justify-between xl:pt-8 xl:pb-22">
+        <div class="text-center order-2 lg:order-none xl:text-left xl:order-none">
+          <span class="text-lg sm:text-xl text-black/70 dark:text-gray-400">Desarrollador de Software</span>
+          <h1 class="text-2xl sm:4xl mb-6 text-black/80 dark:text-gray-100">Hola, yo soy <br /> <span
+              class="text-blue-400">{{ data.MiNombre }}</span></h1>
+          <p class="max-w-[500px] mb-6 text-white/70" [innerHTML]="sanitizedDescription">{{ data.DescripcionGeneral }}
+          </p>
+          <div class="flex flex-col xl:flex-row justify-between items-center gap-8">
+            <button
+              class="border rounded-full border-blue-600 text-blue-600 font-bold p-2 uppercase flex items-center gap-2 transition hover:border-gray-300 hover:text-gray-300"><span>Descargar
+                CV</span><span class="ri-download-fill"></span></button>
             <div class="mb-8 lg:mb-0">
+              <app-socials containerStyles="flex gap-6"
+                iconStyles="size-9 rounded-full flex justify-center items-center text-accent text-base hover:bg-accent dark:text-gray-300 hover:transition-all hover:text-blue-300 duration-500"></app-socials>
             </div>
           </div>
         </div>
-        <div class="order-1 lg:order-none xl:order-none mb-8 xl:mb-0">
+        <div class="order-1 lg:order-none xl:order-none mb-8 md:mb-8">
           <div class="w-full h-full relative">
-            <div class="w-[248px] h-[248px] xl:w-[498px] xl:h-498px">
-              <img src="https://i.ibb.co/3v4FBwx/photo-removebg-preview.png" alt="Foto Jorge Bernal"
-                class="img-custom aspect-square object-contain rounded-full" />
+            <div class="w-[248px] h-[248px] lg:w-[296px] lg:h-[296px] xl:w-[296px] xl:h-296px">
+              <div class="w-[248px] h-[248px] lg:w-[296px] lg:h-[296px] xl:w-[296px] xl:h-296px absolute rounded-full shadow-[10px_-12px_32px_10px_rgba(36,117,232,1),-12px_10px_32px_10px_rgba(36,232,105,1)] animate-spin transition-all"></div>
+                <img [src]="data.Foto" alt="{{ data.Alt }}"
+                  class="img-custom drop-shadow-[0_0_5px_rgba(36,117,232,1)] aspect-square object-contain rounded-full" />
+
             </div>
           </div>
         </div>
       </div>
+      <a href="#experience" aria-label="Ir a la sección de experiencia">
+        <div class="flex flex-col items-center text-4xl lg:text-6xl text-gray-300">
+          <i class="ri-arrow-down-wide-line animate-bounce-down mb-[-28px]"></i>
+          <i class="ri-arrow-down-wide-line animate-bounce-delay"></i>
+        </div>
+      </a>
     </app-section>
 
-    <app-section id="experience"></app-section>
-  </main>
+    <app-section id="experience" class="pt-[80px] lg:pt-44 container mx-auto">
+      <h1 class="text-4xl text-center text-black/80 dark:text-gray-300 mb-6">Experiencia</h1>
+      <app-timeline></app-timeline>
+    </app-section>
 
-  <!-- <app-footer></app-footer> -->
+    <app-section id="technologies" class="pt-[80px] lg:pt-44 mb-12 container mx-auto">
+      <h1 class="text-4xl text-center text-black/80 dark:text-gray-300 mb-6">Tecnolog&iacute;as</h1>
+      <app-technologies></app-technologies>
+    </app-section>
+
+    <!-- <app-section id="projects" class="h-screen pt-[80px] lg:pt-44 container mx-auto">
+      <h1 class="text-4xl text-center text-black/80 dark:text-gray-300 mb-6">Proyectos</h1>
+      <app-card></app-card>
+    </app-section> -->
+  </main>
 </div>

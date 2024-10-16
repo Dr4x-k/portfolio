@@ -1,4 +1,38 @@
 .img-custom {
-  filter: drop-shadow(0 0 5px rgba(0, 0, 0, .5));
   mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+}
+
+@keyframes bounce-up-down {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+}
+
+.animate-bounce-down {
+  animation: bounce-up-down 1s ease-in-out infinite;
+}
+
+.animate-bounce-delay {
+  animation: bounce-up-down 1s ease-in-out infinite;
+  animation-delay: 0.3s;
+}
+
+@keyframes bounce-down {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+}
+
+.animate-bounce-down {
+  animation: bounce-down 1.5s infinite;
+}
+
+.animate-bounce-delay {
+  animation: bounce-down 1.5s infinite 0.5s;
 }

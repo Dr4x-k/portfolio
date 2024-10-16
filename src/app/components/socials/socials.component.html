@@ -1,1 +1,6 @@
-<p>socials works!</p>
+<div [class]="containerStyles">
+  <a *ngFor="let contacto of data | keyvalue" [href]="contacto.value.Url" [class]="iconStyles" target="_blank"
+    rel="noopener noreferrer">
+    <i class="text-xl lg:text-3xl" [ngClass]="contacto.value.Icon"></i>
+  </a>
+</div>

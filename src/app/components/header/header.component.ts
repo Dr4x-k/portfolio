@@ -7,6 +7,7 @@ import { Component, AfterViewInit, OnDestroy } from '@angular/core';
 })
 export class HeaderComponent implements AfterViewInit, OnDestroy {
   private observer: IntersectionObserver | undefined;
+  isMenuOpen = false;
 
   navItems = [
     {
@@ -20,10 +21,20 @@ export class HeaderComponent implements AfterViewInit, OnDestroy {
       url: '/#experience',
     },
     {
-      title: 'Sobre mí',
-      label: 'sobre-mi',
-      url: '/#aboutme',
+      title: 'Tecnologías',
+      label: 'tecnologias',
+      url: '/#technologies',
     },
+    {
+      title: 'Proyectos',
+      label: 'proyectos',
+      url: '/#projects',
+    }
+    // {
+    //   title: 'Sobre mí',
+    //   label: 'sobre-mi',
+    //   url: '/#aboutme',
+    // },
   ];
 
   ngAfterViewInit(): void {
@@ -56,5 +67,9 @@ export class HeaderComponent implements AfterViewInit, OnDestroy {
 
   ngOnDestroy(): void {
     this.observer?.disconnect();
+  }
+
+  toggleMenu() {
+    this.isMenuOpen = !this.isMenuOpen;
   }
 }
