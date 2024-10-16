@@ -16,21 +16,21 @@ export class SocialsComponent implements OnInit {
   constructor (private fbService: FbconfigService) {}
 
   ngOnInit(): void {
-    this.fbService.loadInformation<Contactos>('InformacionPersonal/Contactos').snapshotChanges().subscribe({
-      next: (data) => {
-        data.forEach((item) => {
-          const key = item.key as keyof Contactos; // Obtener la clave del item
-          const value = item.payload.val() as Contactos | null;
+    // this.fbService.loadInformation<Contactos>('InformacionPersonal/Contactos').snapshotChanges().subscribe({
+    //   next: (data) => {
+    //     data.forEach((item) => {
+    //       const key = item.key as keyof Contactos; // Obtener la clave del item
+    //       const value = item.payload.val() as Contactos | null;
 
-          // Comprobar si el valor no es null antes de asignarlo
-          if (value !== null) {
-            this.data[key] = value;
-          }
-        });
-      },
-      error: (err) => {
-        console.error('Error al obtener los datos de Firebase:', err);
-      },
-    });
+    //       // Comprobar si el valor no es null antes de asignarlo
+    //       if (value !== null) {
+    //         this.data[key] = value;
+    //       }
+    //     });
+    //   },
+    //   error: (err) => {
+    //     console.error('Error al obtener los datos de Firebase:', err);
+    //   },
+    // });
   }
 }

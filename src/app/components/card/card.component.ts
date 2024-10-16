@@ -15,23 +15,23 @@ export class CardComponent implements OnInit {
   constructor(private reposService: ReposService) {}
 
   ngOnInit(): void {
-    this.reposService
-      .loadRepos()
-      .pipe(
-        map((repos: any[]) =>
-          repos.map((repo) => ({
-            Nombre: repo.name,
-            Descripcion: repo.description,
-            Lenguajes: repo.lenguage,
-            RepoUrl: repo.html_url,
-          }))
-        )
-      )
-      .subscribe((mappedRepos: Partial<Record<keyof Proyectos, any>>[]) => {
-        this.allRepos = mappedRepos; // Almacenar todos los proyectos
-        if (this.allRepos.length > 0) {
-          this.repos = this.allRepos[0]; // Asignar solo el primer proyecto
-        }
-      });
+    // this.reposService
+    //   .loadRepos()
+    //   .pipe(
+    //     map((repos: any[]) =>
+    //       repos.map((repo) => ({
+    //         Nombre: repo.name,
+    //         Descripcion: repo.description,
+    //         Lenguajes: repo.lenguage,
+    //         RepoUrl: repo.html_url,
+    //       }))
+    //     )
+    //   )
+    //   .subscribe((mappedRepos: Partial<Record<keyof Proyectos, any>>[]) => {
+    //     this.allRepos = mappedRepos; // Almacenar todos los proyectos
+    //     if (this.allRepos.length > 0) {
+    //       this.repos = this.allRepos[0]; // Asignar solo el primer proyecto
+    //     }
+    //   });
   }
 }

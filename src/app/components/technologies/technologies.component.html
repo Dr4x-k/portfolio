@@ -6,13 +6,25 @@
 
   <!-- Contenedor con animación -->
   <div class="animate-infinite-slider flex w-[calc(450px*10)]">
-    <div class="slide flex w-[125px] items-center justify-center" *ngFor="let logo of data | keyvalue; let i = index">
+    <div class="slide flex w-[125px] items-center justify-center">
       <!-- Aquí puedes renderizar el contenido de logo -->
-      <img class="drop-shadow-[0_0_5px_rgba(255,255,255,1)]" [src]="logo.value.Image" alt="{{logo.value.Nombre}}" />
+      <img class="drop-shadow-[0_0_5px_rgba(255,255,255,1)]" src="../../../assets/brand-angular.png" alt="logo" />
+
+      <img class="drop-shadow-[0_0_5px_rgba(255,255,255,1)]" src="../../../assets/brand-html5.png" alt="logo" />
+
+      <img class="drop-shadow-[0_0_5px_rgba(255,255,255,1)]" src="../../../assets/brand-javascript.png" alt="logo" />
+
+      <img class="drop-shadow-[0_0_5px_rgba(255,255,255,1)]" src="../../../assets/brand-c-sharp.png" alt="logo" />
     </div>
     <!-- Segundo grupo de logos -->
-    <div class="slide flex w-[125px] items-center justify-center" *ngFor="let logo of data | keyvalue; let i = index">
-      <img class="drop-shadow-[0_0_5px_rgba(255,255,255,1)]" [src]="logo.value.Image" alt="{{logo.value.Nombre}}" />
+    <div class="slide flex w-[125px] items-center justify-center">
+      <img class="drop-shadow-[0_0_5px_rgba(255,255,255,1)]" src="../../../assets/brand-angular.png" alt="logo" />
+
+      <img class="drop-shadow-[0_0_5px_rgba(255,255,255,1)]" src="../../../assets/brand-html5.png" alt="logo" />
+
+      <img class="drop-shadow-[0_0_5px_rgba(255,255,255,1)]" src="../../../assets/brand-javascript.png" alt="logo" />
+
+      <img class="drop-shadow-[0_0_5px_rgba(255,255,255,1)]" src="../../../assets/brand-c-sharp.png" alt="logo" />
     </div>
   </div>
 </div>
